@@ -11,6 +11,7 @@ const Testimonial = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         axios.get('https://arcane-sands-09318.herokuapp.com/reviews')
+        // axios.get('https://arcane-sands-09318.herokuapp.com/reviews')
             .then(res => setReviews(res.data))
     }, [])
     return (

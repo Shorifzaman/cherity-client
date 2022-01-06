@@ -1,0 +1,182 @@
+/* body
+  background-color: #FAFBFF
+  width: 100%
+  height: 100% */
+  
+.donation-widget-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 10px;
+}
+  
+  
+.alert-container{
+    position: relative;
+    margin: 20px 0px;
+    padding: 15px 20px 20px;
+    background: #e3ebfc;
+    border-radius: 6px;
+}
+  
+  
+.alert-container :after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    transform: translateX(-50%)  ;
+    border: 10px solid #e3ebfc  ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #e3ebfc;
+    border-bottom-color: transparent;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+}
+    
+  
+.alert-info-message{
+    color: #356ae6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 16px;
+}
+ 
+  
+  .remaining-total{
+    font-weight: 600;
+  }
+   
+    
+.progress-bar-container{
+    position: relative;
+    width: 100%;
+    height: 12px;
+    
+}
+  
+  .progress-bar-background{
+    height: 100%;
+    background-color: #B6F2E4;
+    border-radius: 6px 6px 0px 0px;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+    
+.progress {
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        background-color: #19cca3;
+        transition: width 2s linear;
+    }
+      
+  
+.form-container{
+    padding: 36px 30px 30px;
+  background: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: 0px 2px  6px rgba(0,0,0,0.1);
+  cursor: pointer ;
+}
+ 
+  .form-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 26px;
+    text-align: left;
+    color: '1F2129';
+  }
+    
+    
+  .form-subheading{
+    margin-bottom: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 100;
+    line-height: 21px;
+    font-size: 16px;
+    color: '4E5468';
+  }
+   
+    
+    .donors{
+        color: #f30914;
+        font-weight: 600;
+    }
+      
+      
+  .form-success-message{
+      font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 100;
+    line-height: 21px;
+    font-size: 16px;
+    color: '4E5468';
+}
+      
+  .form-input-container{
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 36px;
+    width: 100%;
+    height: 55px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+    
+.form-input-container:before
+      {position: absolute;
+      vertical-align: center;
+      content: "$";
+      left: 5px    ;
+      padding: 16px;
+      color: #9298ad;
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 27px;
+    }
+    
+  .form-input-container .input{ padding-left: 40px;
+}
+    
+  
+  .input 
+    {width: 70%;
+    border: 1px solid #738dcf;
+    background: #0acc8b;
+    border-radius: 6px 0px 0px 6px;
+    color: #fdfdff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+    
+.input ::placeholder
+     { color: #9298ad;
+      font-size: 18px;
+      font-weight: 100;
+      line-height: 27px;
+    }
+    
+    .input ::-webkit-inner-spin-button, ::-webkit-outer-spin-button 
+      {-webkit-appearance: none;
+      margin: 0;
+    }
+
+  .button{
+      width: 35%;
+    padding: 10px;
+    border: 1px solid #19cca3;
+    border-radius: 0px 6px 6px 0px;
+    background: #19cca3;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    cursor: pointer;
+}

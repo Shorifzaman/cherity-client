@@ -14,11 +14,11 @@ const FooterTop = () => {
         { text: 'Contact' },
     ];
     const topServices = [
-        { text: 'Oil change' },
-        { text: 'Engine service' },
-        { text: 'Wheel alignment' },
-        { text: 'Looking glass' },
-        { text: 'Coloring' },
+        { text: 'Education For Poor Child' },
+        { text: 'Foods service' },
+        { text: 'Health Issue' },
+        { text: 'Looking Child Problem' },
+        { text: 'Clothing' },
     ];
     const openingHours = [
         { text: 'Mon - Tue : 6.00 am - 10.00 pm' },
@@ -45,7 +45,7 @@ const FooterTop = () => {
                             <MailOutlineIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText>
-                            contact@thecar.doctor
+                            contact@uktrust.com
                         </ListItemText>
                     </ListItem>
                     <ListItem>
@@ -53,7 +53,7 @@ const FooterTop = () => {
                             <PublicIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText>
-                            www.car-doctor.com
+                            www.uktrust.com
                         </ListItemText>
                     </ListItem>
                 </List>

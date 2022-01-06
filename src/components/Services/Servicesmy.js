@@ -1,5 +1,8 @@
 import React from 'react';
+import SectionTitle from '../Shared/SectionTitle';
 import "./Services.css"
+import { BiDonateHeart } from "react-icons/bi";
+import { SiPostman } from "react-icons/si";
 
 const Servicesmy = () => {
     return (
@@ -8,7 +11,8 @@ const Servicesmy = () => {
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="section-title text-center mb-4 pb-2">
-                <h4 class="title mb-4">Our Features</h4>
+            <SectionTitle text={'ACHIEVED WITH YOU'} />
+                <h4 class="title mb-2">We need your help</h4>
                 <p class="text-muted para-desc mx-auto mb-0">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
             </div>
         </div>
@@ -19,17 +23,22 @@ const Servicesmy = () => {
             <div class="card service-wrapper rounded border-0 shadow p-4">
                 <div class="icon text-center text-custom h1 shadow rounded bg-white">
                     <span class="uim-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span> */}
+                        <BiDonateHeart></BiDonateHeart>
+                       
+                        </span>
                 </div>
                 <div class="content mt-4">
-                    <h5 class="title">Fully Responsive</h5>
+                    <h5 class="title">Help poor people</h5>
                     <p class="text-muted mt-3 mb-0">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
                     <div class="mt-3">
                         <a href="/" class="text-custom">Read More <i class="mdi mdi-chevron-right"></i></a>
                     </div>
                 </div>
                 <div class="big-icon h1 text-custom">
-                    <span class="uim-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                    <span class="uim-svg">
+                    <BiDonateHeart></BiDonateHeart>
+                    </span>
                 </div>
             </div>
         </div>
@@ -37,7 +46,9 @@ const Servicesmy = () => {
         <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
             <div class="card service-wrapper rounded border-0 shadow p-4">
                 <div class="icon text-center text-custom h1 shadow rounded bg-white">
-                    <span class="uim-svg"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path><circle cx="7" cy="17" r="5" class="uim-primary"></circle><path class="uim-tertiary" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path></svg></span>
+                    <span class="uim-svg">
+                    <SiPostman></SiPostman>
+                    </span>
                 </div>
                 <div class="content mt-4">
                     <h5 class="title">Fresh Layouts</h5>

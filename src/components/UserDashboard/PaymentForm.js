@@ -1,4 +1,4 @@
-import { Button, Typography } from '@material-ui/core';
+import { Button, TextField, Typography } from '@material-ui/core';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 import { GetContext } from '../../context';
@@ -8,6 +8,7 @@ const PaymentForm = ({ paymentOrderToggler, setPaymentOrderToggler }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [paymentError, setPaymentError] = useState('')
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -30,11 +31,19 @@ const PaymentForm = ({ paymentOrderToggler, setPaymentOrderToggler }) => {
             event.target.reset();
         }
     };
+
+
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <CardElement />
+            <form onSubmit={handleSubmit }>
+                    
+                    <CardElement style={{base: {fontSize: '18px' , marginTop: 20 , border: "2px solid red"}}} />
+               
                 <Typography style={{ marginTop: 20 }} variant="body1">{`Your service charged will be $${selectedService.fee || 0}`}</Typography>
+                {/* <TextField fullWidth variant="outlined" type="number" style={{ marginTop: 20 }}  defaultValue={selectedService.fee || 0} /> */}
+                
+                
+                
                 <Button
                     style={{ marginTop: 20 }}
                     variant="contained"

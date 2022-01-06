@@ -9,15 +9,18 @@ import Loader from '../Shared/Loader';
 const OrderedServices = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true)
+
     useEffect(() => {
-        axios.get('https://arcane-sands-09318.herokuapp.com/allOrders')
+        axios.get('https://cryptic-everglades-35803.herokuapp.com/allOrders')
+        // axios.get('https://arcane-sands-09318.herokuapp.com/allOrders')
             .then(res => {
                 setOrders(res.data);
                 setLoading(false);
             })
     }, []);
     const updateOrderStatusHandler = (id, status) => {
-        axios.patch(`https://arcane-sands-09318.herokuapp.com/update/${id}`, { status })
+        axios.patch(`https://cryptic-everglades-35803.herokuapp.com/update/${id}`, { status })
+        // axios.patch(`https://arcane-sands-09318.herokuapp.com/update/${id}`, { status })
             .then(res => {
                 console.log(res);
             })
@@ -40,7 +43,7 @@ const OrderedServices = () => {
                                     <TableCell>Status</TableCell>
                                 </TableRow>
                                 {
-                                    orders.map(({ _id, name, email, service, status }) =>
+                                    orders.map(({ _id, name, email, service, status ,role}) =>
                                         <TableRow key={_id}>
                                             <TableCell>{name}</TableCell>
                                             <TableCell>{email}</TableCell>

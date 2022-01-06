@@ -12,7 +12,8 @@ const MyOrder = () => {
     const [loading, setLoading] = useState(true)
     const email = loggedInUser?.email
     useEffect(() => {
-        axios.post('https://arcane-sands-09318.herokuapp.com/orders', { email: email })
+        axios.post('https://cryptic-everglades-35803.herokuapp.com/orders', { email: email })
+        // axios.post('https://arcane-sands-09318.herokuapp.com/orders', { email: email })
             .then(res => {
                 setOrders(res.data);
                 setLoading(false)

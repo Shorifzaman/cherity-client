@@ -17,7 +17,8 @@ export const ContextProvider = ({ children }) => {
     const email = loggedInUser?.email
     
     useEffect(() => {
-        axios.post('https://arcane-sands-09318.herokuapp.com/admin', { email: email })
+        axios.post('https://cryptic-everglades-35803.herokuapp.com/admin', { email: email })
+        // axios.post('https://arcane-sands-09318.herokuapp.com/admin', { email: email })
             .then(res => {
                 setIsAdmin(res.data)
             })

@@ -64,7 +64,8 @@ const AddService = () => {
         }
         console.log(serviceData);
         setLoading(true);
-        axios.post('https://arcane-sands-09318.herokuapp.com/addService', serviceData)
+        axios.post('https://cryptic-everglades-35803.herokuapp.com/addService', serviceData)
+        // axios.post('https://arcane-sands-09318.herokuapp.com/addService', serviceData)
             .then(res => {
                 console.log(res.data);
                 res.data && e.target.reset();

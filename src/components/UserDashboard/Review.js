@@ -42,6 +42,7 @@ const Review = () => {
             image: imageURL
         }
         setLoading(true);
+        // axios.post('https://cryptic-everglades-35803.herokuapp.com/addReview', review)
         axios.post('https://arcane-sands-09318.herokuapp.com/addReview', review)
             .then(res => {
                 console.log(res.data);

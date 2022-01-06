@@ -12,15 +12,18 @@ import { useHistory } from 'react-router';
 const Order = () => {
     const history = useHistory();
     const { selectedService, loggedInUser, paymentSuccess, setSelectedService } = GetContext();
-    const stripePromise = loadStripe('pk_test_51Igx21EC9cEhbZos93ciYpaYBEYNtdTzdlqeH7luPXmuhdFNUfE7j5QIWL6On98Nh6X2pSSCJxb2RSR2brm8aHZa00qZhejvTt');
+    const stripePromise = loadStripe('pk_test_51JwqXjKRo0bNxQXWFNI73U3vkTWfi7PzHn609fOw6YVQQhjf12EUDFYbf7N7QPDsIKfekrpc5v8orPVOB0glBAWD007UUja9VQ');
+    // const stripePromise = loadStripe('pk_test_51Igx21EC9cEhbZos93ciYpaYBEYNtdTzdlqeH7luPXmuhdFNUfE7j5QIWL6On98Nh6X2pSSCJxb2RSR2brm8aHZa00qZhejvTt');
     const [paymentOrderToggler, setPaymentOrderToggler] = useState(false)
     const [services, setServices] = useState([]);
     useEffect(() => {
-        axios.get('https://arcane-sands-09318.herokuapp.com/services')
+        axios.get('https://cryptic-everglades-35803.herokuapp.com/services')
+        // axios.get('https://arcane-sands-09318.herokuapp.com/services')
             .then(res => setServices(res.data))
     }, [])
     const selectedServiceHandler = title => {
-        axios.get(`https://arcane-sands-09318.herokuapp.com/service/${title}`)
+        axios.get(`https://cryptic-everglades-35803.herokuapp.com/service/${title}`)
+        // axios.get(`https://arcane-sands-09318.herokuapp.com/service/${title}`)
             .then(res => setSelectedService(res.data[0]))
     }
 
@@ -33,10 +36,12 @@ const Order = () => {
             fee: selectedService.fee,
             paymentId: paymentSuccess,
             status: 'Pending',
+            role: 'donor',
             date: new Date()
         };
 
-        axios.post('https://arcane-sands-09318.herokuapp.com/addOrder', orderData)
+        axios.post('https://cryptic-everglades-35803.herokuapp.com/addOrder', orderData)
+        // axios.post('https://arcane-sands-09318.herokuapp.com/addOrder', orderData)
             .then(res => {
                 if (res.data) {
                     history.push('/my-order');
@@ -60,7 +65,7 @@ const Order = () => {
                             <TextField fullWidth variant="outlined" defaultValue={loggedInUser.email} />
                         </Grid>
                         <Grid item lg={12} xs={12}>
-                            <Typography variant="h5">Service</Typography>
+                            <Typography variant="h5">Donate Causes</Typography>
                             <Select
                                 fullWidth
                                 variant="outlined"
@@ -75,9 +80,10 @@ const Order = () => {
                         <Grid item lg={12} xs={12}>
                             <Typography variant="caption">Pay with</Typography>
                             <Typography variant="h5"><Radio checked /><CreditCardIcon /> Credit Card</Typography>
+                            <label  style={{ marginTop: 20 }}>card Details </label>
                         </Grid>
                         <Grid item lg={12} xs={12}>
-                            <Elements stripe={stripePromise}>
+                            <Elements stripe={stripePromise} >
                                 <PaymentForm
                                     paymentOrderToggler={paymentOrderToggler}
                                     setPaymentOrderToggler={setPaymentOrderToggler}

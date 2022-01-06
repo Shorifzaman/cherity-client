@@ -11,7 +11,8 @@ const AddAdmin = () => {
     }
     const addAdminHandler = (e) => {
         e.preventDefault();
-        axios.post('https://arcane-sands-09318.herokuapp.com/addAdmin', email)
+        axios.post('https://cryptic-everglades-35803.herokuapp.com/addAdmin', email)
+        // axios.post('https://arcane-sands-09318.herokuapp.com/addAdmin', email)
             .then(res => {
                 if (res.data) {
                     e.target.reset();

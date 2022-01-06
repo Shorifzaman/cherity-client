@@ -1,43 +1,45 @@
 import React from 'react';
+import SectionTitle from '../../components/Shared/SectionTitle';
 
 const About = () => {
     return (
         <>
 <div class="container">
     <div class="row align-items-center py-3">
-    <h3 class="text-center font-weight-bold mb-3">About Us</h3>
+    <SectionTitle text={'About us'} />
     <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
             <div class="section-title ml-lg-5">
-                <h5 class="text-custom font-weight-bold mb-3">Charity</h5>
+                <h2 class="font-weight-bold mb-3"><SectionTitle text={'Aidup Charity'} /></h2>
+                
                 <h4 class="title mb-4">
                     Our mission is to <br />
                     make your life easier.
                 </h4>
-                <p class="text-muted mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit quod debitis praesentium pariatur temporibus ipsa, cum quidem obcaecati sunt?</p>
+                <p class="text-muted mb-0">The practice of charity means the voluntary giving of help to those in need, as a humanitarian act. There are a number of philosophies about charity, often associated with religion. Effective altruism is the use of evidence and reasoning to determine</p>
 
                 <div class="row">
                     <div class="col-lg-6 mt-4 pt-2">
                         <div class="media align-items-center rounded shadow p-3">
                             <i class="fa fa-play h4 mb-0 text-custom"></i>
-                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Responsive</a></h6>
+                            <h6 class="ml-3 mb-0">Donate for helpless</h6>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4 pt-2">
                         <div class="media align-items-center rounded shadow p-3">
                             <i class="fa fa-file-download h4 mb-0 text-custom"></i>
-                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Free Download</a></h6>
+                            <h6 class="ml-3 mb-0">Save the Humanity</h6>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4 pt-2">
                         <div class="media align-items-center rounded shadow p-3">
                             <i class="fa fa-user h4 mb-0 text-custom"></i>
-                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Support</a></h6>
+                            <h6 class="ml-3 mb-0">Support Humanity</h6>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4 pt-2">
                         <div class="media align-items-center rounded shadow p-3">
                             <i class="fa fa-image h4 mb-0 text-custom"></i>
-                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Development</a></h6>
+                            <h6 class="ml-3 mb-0">Development</h6>
                         </div>
                     </div>
                 </div>
@@ -58,7 +60,7 @@ const About = () => {
 
                         <div class="col-12">
                             <div class="mt-4 pt-2 text-right">
-                                <a href="/public" class="btn btn-info">Read More <i class="mdi mdi-chevron-right"></i></a>
+                                <a href="/blog" class="btn btn-info">Read More <i class="mdi mdi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>

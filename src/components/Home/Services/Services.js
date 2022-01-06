@@ -10,7 +10,8 @@ const Services = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get('https://arcane-sands-09318.herokuapp.com/services')
+        axios.get('https://cryptic-everglades-35803.herokuapp.com/services')
+        // axios.get('https://arcane-sands-09318.herokuapp.com/services')
             .then(res => {
                 setServices(res.data);
                 setLoading(false)
@@ -18,7 +19,7 @@ const Services = () => {
     }, [])
     return (
         <Container style={{ minHeight: '100vh' }} id="services">
-            <SectionTitle icon={serviceIcon} text={'Our Services'} />
+            <SectionTitle icon={serviceIcon} text={'Our Services Causes'} />
             {loading ? <Loader /> :
                 <Grid container spacing={3}>
                     {

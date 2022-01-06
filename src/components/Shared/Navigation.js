@@ -115,6 +115,14 @@ const scrollNavItems = [
         path: 'achievement'
     },
     {
+        label: 'Event',
+        path: 'event'
+    },
+    {
+        label: 'Blogs',
+        path: 'blog'
+    },
+    {
         label: 'Contact',
         path: 'contact'
     },

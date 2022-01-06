@@ -13,27 +13,27 @@ const OurExpert = () => {
         {
             img: mechanic1,
             name: 'Andrew Smith',
-            expertize: '-Engine Expert-'
+            expertize: 'Founder'
         },
         {
             img: mechanic2,
             name: 'John Anderson',
-            expertize: '-Polish Expert-'
+            expertize: '-CEO-'
         },
         {
             img: mechanic3,
             name: 'Zakaria Smith',
-            expertize: '-Coloring Expert-'
+            expertize: '-Trusty-'
         },
         {
             img: mechanic4,
             name: 'Sakib Anderson',
-            expertize: '-Alrounder Expert-'
+            expertize: '-Trusty-'
         },
     ]
     return (
         <Container>
-            <SectionTitle icon={ourExpertIcon} text={'Our Experts'} />
+            <SectionTitle icon={ourExpertIcon} text={'Our Cherity Trusty'} />
             <Grid container spacing={3}>
                 {
                     ourExpertsData.map((expert, i) => <Grid key={i} item md={3} sm={6} xs={12}>

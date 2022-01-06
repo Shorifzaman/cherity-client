@@ -11,7 +11,8 @@ const ManageServices = () => {
     const [loading, setLoading] = useState(true)
     const [processing, setProcessing] = useState(false)
     useEffect(() => {
-        axios.get('https://arcane-sands-09318.herokuapp.com/services')
+        axios.get('https://cryptic-everglades-35803.herokuapp.com/services')
+        // axios.get('https://arcane-sands-09318.herokuapp.com/services')
             .then(res => {
                 setServices(res.data);
                 setLoading(false)
@@ -19,7 +20,8 @@ const ManageServices = () => {
     }, [services]);
     const deleteServiceHandler = id => {
         setProcessing(true)
-        axios.delete(`https://arcane-sands-09318.herokuapp.com/delete/${id}`)
+        axios.delete(`https://cryptic-everglades-35803.herokuapp.com/delete/${id}`)
+        // axios.delete(`https://arcane-sands-09318.herokuapp.com/delete/${id}`)
             .then(res => {
                 res.data && setProcessing(false)
             })

@@ -18,17 +18,17 @@ const useStyle = makeStyles({
 const ServiceSingle = ({ service }) => {
     const { root } = useStyle();
     const history = useHistory()
-    const { title, fee, image, description } = service;
+    const { title, fee, image, description, goal, percent } = service;
+
     const { setSelectedService } = GetContext()
     const selectServiceHandler = () => {
         setSelectedService(service)
         history.push('/order')
     }
-
     return (
         <Paper className={root}>
-            <img src={image} alt="" width="100%" />
-            <Progress percent={88} status="success"/>
+            <img src={image} alt="" width="100%"  height="200px" />
+            <Progress percent={percent} status="success"/>
             {/* <FaHandsHelping style={{ borderRadius:"50%", backgroundColor:"#34495E",marginBottom: "10px", fontSize: "30px",padding:"20px", border:"1px solid #ff00" }}></FaHandsHelping> */}
             <div style={{ padding: 25 }}>
         
@@ -42,13 +42,16 @@ const ServiceSingle = ({ service }) => {
                         bgcolor: 'background.paper',
                         }}>
 
-                <Typography variant="h4" color="secondary" style={{ fontWeight: 700, marginTop: 10 }}>${fee}</Typography>
-                <Typography variant="h4" color="secondary" style={{ fontWeight: 500, marginTop: 10 }}><small style={{ background: '#202C45', color: '#fff' }}>Goal:</small> ${fee}</Typography>
+                {/* <Typography variant="h5" color="secondary" style={{ fontWeight: 700, marginTop: 10 }}>${fee}</Typography> */}
+                <Typography variant="h5" color="secondary" style={{ fontWeight: 700, marginTop: 10 }}>${fee}</Typography>
+                <Typography variant="h5" color="secondary" style={{ fontWeight: 400, marginTop: 10 }}><small style={{ color: '#F2184F' }}>Goal:</small> ${goal}</Typography>
 
                 </Box>
                 
-                <Typography variant="body1" style={{ margin: '10px 0' }}>{description}</Typography>
-                <Button onClick={selectServiceHandler} variant="contained" style={{ background: '#202C45', color: '#fff' }}>Get Service </Button>
+                <Typography variant="body1" style={{ margin: '10px 0' }}>{description.slice(0, 200)}</Typography>
+                
+                
+                <Button onClick={selectServiceHandler} variant="contained" style={{ background: '#19cca3', color: '#fff' }}>Donate</Button>
             </div>
         </Paper >
     );

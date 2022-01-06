@@ -5,23 +5,26 @@ import Banner from './Banner/Banner';
 import Contact from './Contact/Contact';
 import OurAchievement from './OurAchivement/OurAchievement';
 import OurExpert from './OurExpert/OurExpert';
+import ServiceDetail from './Services/ServiceDetail';
 import Services from './Services/Services';
 import Testimonial from './Testimonial/Testimonial';
 import Servicesmy from './../Services/Servicesmy';
 import About from './../About/About';
+import DonationWidget from './../Donation/DonationWidget';
 
 const Home = () => {
     return (
         <>
             <Banner />
-            {/* <Sliders></Sliders> */}
             <Services />
-            <OurExpert />
+            <ServiceDetail></ServiceDetail>
             <About></About>
             <OurAchievement />
+            <OurExpert />
             <Testimonial />
-            <Contact />
+            <DonationWidget></DonationWidget>
             <Servicesmy></Servicesmy>
+            <Contact />
         </>
     );
 };

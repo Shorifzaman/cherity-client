@@ -1,7 +1,7 @@
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
-import bgImg1 from '../../../image/achievementbg.jpg'
-import DriveEtaOutlinedIcon from '@material-ui/icons/DriveEtaOutlined';
+// import bgImg1 from '../../../image/achievementbg.jpg'
+import { FaHandsHelping } from "react-icons/fa";
 import PeopleOutlineOutlinedIcon from '@material-ui/icons/PeopleOutlineOutlined';
 import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import CardGiftcardOutlinedIcon from '@material-ui/icons/CardGiftcardOutlined';
@@ -26,7 +26,7 @@ const useStyle = makeStyles({
 })
 const data = [
     {
-        Icon: DriveEtaOutlinedIcon,
+        Icon: FaHandsHelping,
         count: 10,
         text: 'Years in Charity Done'
     },
